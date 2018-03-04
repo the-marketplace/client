@@ -1,5 +1,5 @@
 {
-  "name": "tester",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -23,14 +23,20 @@
     "@vue/eslint-config-typescript": "^3.0.0-beta.3",
     "@vue/test-utils": "^1.0.0-beta.10",
     "babel-core": "^7.0.0-0",
+    "husky": "^0.15.0-rc.8",
+    "lint-staged": "^7.0.0",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "ts-jest": "^22.0.1",
     "vue-template-compiler": "^2.5.13"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
+  "lint-staged": {
+    "*.{ts, tsx, js, json}": ["eslint --fix", "git add"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }
