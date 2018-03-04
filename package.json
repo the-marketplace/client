@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "test": "vue-cli-service test",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "vue": "^2.5.13",
@@ -23,20 +24,15 @@
     "@vue/eslint-config-typescript": "^3.0.0-beta.3",
     "@vue/test-utils": "^1.0.0-beta.10",
     "babel-core": "^7.0.0-0",
-    "husky": "^0.15.0-rc.8",
+    "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "ts-jest": "^22.0.1",
     "vue-template-compiler": "^2.5.13"
   },
-  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
   "lint-staged": {
-    "*.{ts, vue, tsx, js, json}": ["yarn lint", "git add"]
+    "*.{ts, vue, js, json}": ["eslint --fix", "git add"]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  }
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
 }
