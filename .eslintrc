@@ -1,23 +1,19 @@
 {
-	"root": true,
-	"extends": [
-		"plugin:vue/essential",
-		"eslint:recommended",
-		"@vue/typescript"
-	],
-	"rules": {
-		"no-extra-semi": "warn",
-		"complexity": ["warn", 3],
-		"default-case": "error",
-		"eqeqeq": "error",
-		"no-else-return": "warn",
-		"require-await": "error",
-		"require-jsdoc": "warn",
-		"block-spacing": "error",
-		"semi": "error",
-		"spaced-comment": "warn",
-		"quotes": ["error", "single"],
-		"comma-dangle": ["error", "always-multiline"],
-		"indent": ["error", "tab"]
-	}
+  "root": true,
+  "extends": ["plugin:vue/essential", "eslint:recommended", "@vue/typescript"],
+  "rules": {
+    "no-extra-semi": "warn",
+    "complexity": ["warn", 3],
+    "default-case": "error",
+    "eqeqeq": "error",
+    "no-else-return": "warn",
+    "require-await": "error",
+    "require-jsdoc": "warn",
+    "block-spacing": "error",
+    "semi": "error",
+    "spaced-comment": "warn",
+    "quotes": ["error", "single"],
+    "comma-dangle": ["error", "always-multiline"],
+    "indent": ["error", "tab"]
+  }
 }
