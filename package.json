@@ -32,7 +32,7 @@
   },
   "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
   "lint-staged": {
-    "*.{ts, tsx, js, json}": ["yarn lint", "git add"]
+    "*.{ts, vue, tsx, js, json}": ["yarn lint", "git add"]
   },
   "husky": {
     "hooks": {
